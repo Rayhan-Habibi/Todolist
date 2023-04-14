@@ -109,6 +109,14 @@ input::placeholder{
   background-color: #f2f2f2;
   opacity: 0.9;
 }
+@media only screen and (max-width: 767px){
+  .container{
+    width: 70vw;
+  }
+  .listContainer{
+    width: 90vw;
+  }
+}
 
 
 
