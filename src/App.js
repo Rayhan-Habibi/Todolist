@@ -46,17 +46,12 @@ function App() {
           <button className='plus' onClick={handleClick}>+</button>
         </div>
       </form>
-      <div className="container2">
       <div className="listContainer">
         {
         todoData.map(
           (todo) => <p key={todo.id} className={todo.complete? "complete" : ""} onClick={()=>handleToggle(todo.id)} style={{textDecoration: todo.complete? 'line-through' : 'none'}} >{todo.task}</p>
           )
         }
-      </div>
-      </div>
-      <div className="clear">
-        <button className='clearButton'>Clear Complete Todo</button>
       </div>
     </div>
   );
