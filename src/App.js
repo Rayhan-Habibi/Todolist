@@ -10,8 +10,12 @@ function App() {
   function handleChange(e){
     setItems(e.target.value)
   }
+
   const handleClick = (event) => {
     event.preventDefault()
+    if (items == "") {
+      window.alert("Please enter a value")
+    } else {
     const id = todoData.length + 1;
     setTodoData((prev) => [
       ...prev,
@@ -21,7 +25,7 @@ function App() {
         complete: false,
       },
     ]);
-    setItems("");
+    setItems("");}
   };
 
   const handleToggle = (id) => {
@@ -30,11 +34,13 @@ function App() {
     });
     setTodoData(mapped);
   }
-  const clearButton = (id) =>{
-    let mapped = todoData.map(task => {
-      return task.id == id ? { ...task, complete: !task.complete } : { ...task};
-    });
-    setTodoData(mapped);
+
+  const handleClear = () => {
+    for (var i = 0; i <= todoData.map((e) => e.id); i++){
+      if (todoData[i].conpleted = true){
+        setTodoData(todoData.splice(i, 1))
+      }
+    }
   }
 
   return (
@@ -53,6 +59,7 @@ function App() {
           )
         }
       </div>
+      <button onClick={handleClear}>Click me</button>
     </div>
   );
 }
