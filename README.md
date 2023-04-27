@@ -12,3 +12,6 @@
 6. Switching the functionality from "click the todo to finish" to "click button to finish"
 7. Minor bug fixes
 8. Changed the app name from "My ToDo" to "Routines"
+
+### V 2.1
+1. Fixed button functionality like deleting specific task and clear all function
